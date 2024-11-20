@@ -71,9 +71,7 @@ ciscodnacbackupctl config --hostname $2 --username $3 --password $4
 
 ciscodnacbackupctl daemon start --keep 4
 
-ciscodnacbackupctl deamon status
-
-ciscodnacbackupctl list
+ciscodnacbackupctl schedule_purge -i daily
 
 EOF1
 # Make it an executable
