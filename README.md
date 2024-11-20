@@ -17,8 +17,8 @@ Tested on Ubuntu 22.04.4 LTS
 
 example: sudo wget -O - http://raw.githubusercontent.com/Michaelkarper/backupserversetup/main/setup-script-unix.sh | sudo bash -s nonrootuser 10.1.0.10 admin 'examplep@$$!'
 
-4. Wait for reboot and verify daemon is running. <ciscodnacbackupctl daemon status>
+4. Wait for reboot and verify daemon is running. (ciscodnacbackupctl daemon status)
 
-5. Verify backup-purge service is running. <sudo systemctl status backup-purge.service> 
+5. Verify backup-purge service is running. (sudo systemctl status backup-purge.service)
 
 6. Proceed with configuring your Assurance backup in DNA/Catalyst Center.
