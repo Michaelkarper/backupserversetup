@@ -1,9 +1,9 @@
 # backupserversetup
-## Easy setup script for Ubuntu server to act as NFS server for DNA/Catalyst Center Assurance backups including automatic backup purging. 
+## Easy setup script for linux/unix server to act as NFS server for DNA/Catalyst Center Assurance backups including automatic backup purging. 
 
 Tested on Ubuntu 22.04.4 LTS
 # Install
-1. Setup your Ubuntu machine as usual.
+1. Setup your linux/unix machine as usual.
 2. execute the bash script including args.
 
    $1 = Ubuntu user
@@ -15,7 +15,7 @@ Tested on Ubuntu 22.04.4 LTS
    
    $4 = DNA/Catalyst Center admin password
 
-example: sudo wget -O - http://raw.githubusercontent.com/Michaelkarper/backupserversetup/main/setup-script-unix.sh | sudo bash -s nonrootuser 10.1.0.10 admin 'examplep@$$!'
+example: sudo wget -O - http://raw.githubusercontent.com/Michaelkarper/backupserversetup/main/setup-script.sh | sudo bash -s nonrootuser 10.1.0.10 admin 'examplep@$$!'
 
 4. Wait for reboot and verify daemon is running. (ciscodnacbackupctl daemon status)
 
