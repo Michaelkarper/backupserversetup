@@ -73,6 +73,8 @@ ciscodnacbackupctl daemon start --keep 4
 
 ciscodnacbackupctl schedule_purge -i daily
 
+exit 0
+
 EOF1
 # Make it an executable
 echo 'Making init-purge an executable...'
@@ -83,12 +85,8 @@ echo 'Creating backup-purge service...'
 cat >/etc/systemd/system/backup-purge.service <<EOF2
 [Unit]
 description=Backup purge service
-After=network-online.target
-Wants=network-online.target
 
 [Service]
-Type=forking
-RemainAFterExit=yes
 User=$1
 ExecStart=/usr/bin/init-purge.sh
 
